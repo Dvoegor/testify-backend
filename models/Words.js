@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../sequelize');
 
-const Words = sequelize.define('crossWords', {
+const Words = sequelize.define('Words', {
   id: {
     type: Sequelize.INTEGER,
     autoIncrement: true,
@@ -24,7 +24,7 @@ const Words = sequelize.define('crossWords', {
     type: Sequelize.STRING,
     allowNull: false,
   },
-  subjectArea: {
+  area: {
     type: Sequelize.STRING,
     allowNull: false,
   },

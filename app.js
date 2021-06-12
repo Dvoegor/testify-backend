@@ -48,7 +48,7 @@ app.use((req, res, next) => {
   next();
 });
 
-const PORT = 3000;
+const PORT = 3001;
 
 const indexRoute = require('./routes/index');
 
