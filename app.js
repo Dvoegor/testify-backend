@@ -51,8 +51,10 @@ app.use((req, res, next) => {
 const PORT = 3001;
 
 const indexRoute = require('./routes/index');
+const listRoute = require('./routes/list');
 
 app.use('/', indexRoute);
+app.use('/list', listRoute);
 
 sequelize
   .sync()
