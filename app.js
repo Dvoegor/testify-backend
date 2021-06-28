@@ -53,13 +53,13 @@ const PORT = 3001;
 const indexRoute = require('./routes/index');
 const listRoute = require('./routes/list');
 const loginRoute = require('./routes/login')
-const createTetsRoute = require('./routes/createTest')
+const createTestRoute = require('./routes/createTest')
 const questionListRoute = require('./routes/questionList')
 
 app.use('/', indexRoute);
 app.use('/list', listRoute);
 app.use('/login', loginRoute);
-app.use('/createTest', createTetsRoute);
+app.use('/createTest', createTestRoute);
 app.use('/questionList', questionListRoute);
 
 sequelize
