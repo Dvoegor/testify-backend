@@ -10,11 +10,16 @@ router.post("/", (req, res) => {
   // const idList = req.query.list;
   const profileId = req.body.profileId;
   const testName = req.body.testName;
+    const dateTime = req.body.dateTime;
+    const time = req.body.time;
   const idArr = req.body.idArr;
 
   Tests.create({
     profile_id: profileId,
-    test_name: testName
+    test_name: testName,
+      dateTime: dateTime,
+      minutes: time
+
   })
     .then((data) => {
       // console.log(data.dataValues.id)
@@ -25,11 +30,11 @@ router.post("/", (req, res) => {
       });
       // console.log(questionsObj)
       Questions.bulkCreate(questionsArr).then(data => {
-        let resultObj = {    
-          testId: testId, 
-          wordIds: []        
+        let resultObj = {
+          testId: testId,
+          wordIds: []
         };
-        
+
         data.forEach(element => {
           resultObj.wordIds.push(element.dataValues.word_id)
         });

@@ -20,6 +20,14 @@ const Tests = sequelize.define("Tests", {
     type: Sequelize.STRING,
     allowNull: true,
   },
+  minutes: {
+    type: Sequelize.INTEGER,
+    allowNull: false,
+  },
+  dateTime: {
+    type: Sequelize.DATE,
+    allowNull: false,
+  },
 });
 
 module.exports = Tests;
