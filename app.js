@@ -55,12 +55,16 @@ const listRoute = require('./routes/list');
 const loginRoute = require('./routes/login')
 const createTestRoute = require('./routes/createTest')
 const questionListRoute = require('./routes/questionList')
+const passTestRoute = require('./routes/passTest')
+const profileRoute = require('./routes/profile')
 
 app.use('/', indexRoute);
 app.use('/list', listRoute);
 app.use('/login', loginRoute);
 app.use('/createTest', createTestRoute);
 app.use('/questionList', questionListRoute);
+app.use('/passTest', passTestRoute);
+app.use('/profile', profileRoute);
 
 sequelize
   .sync()
