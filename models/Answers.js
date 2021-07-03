@@ -12,6 +12,10 @@ const Answers = sequelize.define("Answers", {
     type: Sequelize.INTEGER,
     allowNull: false,
   },
+  profile_id: {
+    type: Sequelize.INTEGER,
+    allowNull: false,
+  },
   word_id: {
     type: Sequelize.INTEGER,
     allowNull: false,
@@ -19,6 +23,9 @@ const Answers = sequelize.define("Answers", {
   answer: {
     type: Sequelize.STRING,
     allowNull: true,
+  },
+  isCorrect: {
+    type: Sequelize.BOOLEAN
   },
 });
 

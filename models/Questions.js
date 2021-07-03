@@ -16,6 +16,14 @@ const Questions = sequelize.define("Questions", {
     type: Sequelize.INTEGER,
     allowNull: false,
   },
+  answers_qnt: {
+    type: Sequelize.INTEGER,
+    allowNull: true,
+  },
+  right_answers_qnt: {
+    type: Sequelize.INTEGER,
+    allowNull: true,
+  },
 });
 
 module.exports = Questions;
